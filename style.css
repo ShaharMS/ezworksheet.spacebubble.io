@@ -2,10 +2,24 @@ body {
     margin: 0;
     padding: 0;
     background: rgb(14, 14, 14);
+    font-family: 'Jost', sans-serif;
+    color: rgba(255, 255, 255, 0.904);
 }
 
 h1 {
-    background: -webkit-linear-gradient(#2ADF9E, #275CE5);
+    background: linear-gradient(to right,#2ADF9E, #275CE5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 section {
@@ -14,6 +28,37 @@ section {
 }
 
 .center-children {
-    margin-inline: auto;
-    margin-block: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.904);
+    text-decoration: none;
+}
+
+.cool-underline {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.cool-underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cool-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
