@@ -11,15 +11,15 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4rem;
+    font-size: 5vw;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3vw;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2vw;
 }
 
 section {
@@ -58,7 +58,7 @@ a {
   transition: transform 0.25s ease-out;
 }
 
-.cool-underline:hover:after {
+.cool-underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
