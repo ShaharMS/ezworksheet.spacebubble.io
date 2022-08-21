@@ -1,8 +1,16 @@
+/*define color variables in root*/
+:root {
+    --first-color: #1a1a1a;
+    --second-color: #000222;
+    --third-color: #000222;
+    --fourth-color: #1a1a1a;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: rgb(14, 14, 14);
-    font-family: 'Jost', sans-serif;
+    background: var(--first-color);
+    font-family: 'Open Sans', sans-serif;    
     color: rgba(255, 255, 255, 0.904);
 }
 
@@ -12,6 +20,7 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 5vw;
+    font-weight: bold;
 }
 
 h2 {
@@ -23,8 +32,10 @@ h3 {
 }
 
 section {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .center-children {
@@ -37,6 +48,19 @@ section {
 a {
     color: rgba(255, 255, 255, 0.904);
     text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: auto;
+    justify-items: stretch;
+    align-items: center;
 }
 
 .cool-underline {
@@ -61,4 +85,17 @@ a {
 .cool-underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.first {
+    background: linear-gradient(to bottom, var(--first-color), var(--second-color));
+}
+.second {
+    background: linear-gradient(to bottom, var(--second-color), var(--third-color));
+}
+.third {
+    background: linear-gradient(to bottom, var(--third-color), var(--fourth-color));
+}
+.fourth {
+    background: linear-gradient(to bottom, var(--fourth-color), var(--first-color));
 }
