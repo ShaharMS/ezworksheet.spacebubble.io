@@ -1,0 +1,46 @@
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .app-title {
+    padding-block: 20vh;
+    font-size: xx-large;
+}
+
+section .app-desc {
+    padding-inline: 20vw;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+section .pad {
+    padding-inline: 5vw;
+}
+
+section .img {
+    width: 70%;
+    min-width: 600px;
+}
+
+section .img-desc {
+    width: 20%;
+}
+
+@media screen and (max-width: 852px) {
+    
+    section .img-desc {
+        width: 100%;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .img {
+        margin-inline: auto;
+    }
+}

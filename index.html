@@ -1,410 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZWorksheet</title>
-    <script src="./sources/htmlIncluder.js"></script>
+    <title>EZWorksheet | Your New Schoolwork Manager</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mainPage.css">
+    <script src="./sources/htmlIncluder.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="containerCell">
-            <h2>This page is an early indicator the EZWorksheet app is getting worked on :).</h2>
-            <p>
-                Right now, the current version is:
-            </p>
-
-            <div class="row" style="column-gap: 10px;">
-                <code class="codeblock">
-                    <h2 id="version" style="margin: 5px;"></h2>
-                </code>
-                <code class="codeblock downloadButton" id="download">
-                    <h2 style="margin: 5px;">
-                        <img src="./images/DownloadIcon.svg" alt="" class="downloadIcon">
-                        Download</h2>
-                </code>
-            </div>
-
-            <p>
-                What is this version thing?
-            </p>
-            <table>
-                <tr>
-                    <td>
-                        <code><b>Y</b>-x.x.x</code>
-                    </td>
-                    <td>
-                        Indicates a build version: <br>
-                        <b>alpha</b> means the application is in a usable, but in an early stage of development. <br>
-                        <b>beta</b> means the application is closer to release, but still has some quirks. <br>
-                        <b>rc</b> means the application is very close to official release, and is pretty much fully
-                        usable, maybe missing some features. <br>
-                        <b>No prefix</b> means the application is officialy released.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <code>x-<b>Y</b>.x.x</code>
-                    </td>
-                    <td>
-                        Indicates a major versions - that means a large enough change was made to the app's code that
-                        it's no longer compatible with previous versions.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <code>x-x.<b>Y</b>.x</code>
-                    </td>
-                    <td>
-                        Indicates a minor version - that means a large, or medium change was made for the app, usually
-                        adding new features. Previous versions are still compatible.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <code>x-x.x.<b>Y</b></code>
-                    </td>
-                    <td>
-                        Indicates a patch version - that means a small change was made to the app, usually being a bug
-                        fix, or a new feature. Previous versions are still compatible.
-                    </td>
-                </tr>
-            </table>
-
-            <hr>
-            <h2>What is EZWorksheet?</h2>
-
-            <p>EZWorksheet is an app that lets you take worksheets in multiple
-                formats (image, pdf, docx) and complete them, just like you would on paper -
-                with text boxes placed where you need to type.
-                The app also lets you group those pages into workbooks of specific subjects,
-                allowing the app to be an all-in-one solution for mess involving school worksheets :).<br>
-                <br>
-                The app can also replace your notebook, as it offers drawing & page creation capabilities.
-                You can utilize the file types this application supports to save worksheets/lots of pages in
-                the compact and quality "oriented" <code>.ezw</code> format, or use the portable, workbook (<code>.wb</code>)
-                format to store many pages as groups for certine subjects (for example, you can create a workbook for English, 
-                in which you can have a front cover, worksheets, images and regular notebook pages)
-            </p>
+    <section>
+        <h1 class="app-title">Your New Schoolwork Manager.</h1>
+        <p class="app-desc">EZWorksheet lets you get rid of school related mess by replacing your notebooks. and ring binder. and pencil case..</p>
+    
+        <div class="row" style="column-gap: 10px;">
+            <code class="codeblock">
+                <h2 id="version" style="margin: 5px;"></h2>
+            </code>
+            <code class="codeblock downloadButton" id="download">
+                <h2 style="margin: 5px;">
+                    <img src="./images/DownloadIcon.svg" alt="" class="downloadIcon">
+                    Download</h2>
+            </code>
+            <code class="codeblock">
+                <a href="./changelog.html" style="text-decoration: none; color: rgb(212, 212, 212)"><h2 style="margin: 5px;">Changelog</h2></a>
+            </code>
         </div>
-        <div id="changelog" class="containerCell">
-            <h1>Changelog</h1>
-            <br>
-            <div style="display: flex; flex-direction: column-reverse;">
-                <div>
-                    <h2>alpha-1.0.0 <small>July 9th, 2022</small> <small>alpha</small></h2>
-                    <ul>
-                        <li>Initial alpha release</li>
-                        <li>added basic UI for drawing and choosing colors</li>
-                        <li>added a basic line detection algorithm for detecting lines inside pages</li>
-                        <li>app infrastructure</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>alpha-1.0.1 <small>July 13th, 2022</small> <small>alpha</small></h2>
-                    <ul>
-                        <li>Fixed first line getting clipped when pressing enter</li>
-                        <li>Fixed unusually tall text fields from being genereated</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>alpha-1.1.0 <small>July 17th, 2022</small> <small>alpha</small></h2>
-                    <ul>
-                        <li>Page Reader:
-                            <ul>
-                                <li>Now works a <i>lot</i> faster - <code>2s</code> down to <code>0.225s</code></li>
-                                <li>Fixed extra lines being wrongly detected</li>
-                                <li>The reader should now detect curved/skewed lines</li>
-                            </ul>
-                        </li>
-                        <li>Fixed text fields from lagging when typing lots of characters</li>
-                        <li>File saving now works in a web page</li>
-                        <li>Text fields now have additional controls:
-                            <ul>
-                                <li>Resizing</li>
-                                <li>Rotating</li>
-                                <li>Moving</li>
-                                <li>Matching text size</li>
-                            </ul>
-                        </li>
-                        <li>Added <b>Remove Last Page</b> option in File menu</li>
-                        <li>Added infrastructure for <b>Autosave</b></li>
-                        <li>Added text placing functionality</li>
-                        <li>history tab's code has been refined to work faster with larger histories</li>
-                        <li>Added Text to the history tab</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>alpha-1.2.0 <small>August 7th</small> <small>alpha</small></h2>
-                    <ul>
-                        <li>Sidebar:
-                            <ul>
-                                <li>remove show/hide arrow</li>
-                                <li>position is now fixed</li>
-                                <li>Toolbox is now layed down horizontally, with a 6*2 grid</li>
-                                <li>Fixed weird gap between the menu and the sidebar</li>
-                                <li>Fixed blue borders showing up</li>
-                                <li>all "boxes" are now lined up, should have the same width and border</li>
-                            </ul>
-                        </li>
-                        <li>changed traces to warnings when using unimplemented features</li>
-                        <li>fixed slowdowns when opening a new page</li>
-                        <li>Attributes Tab
-                            <li>Added Global variables for editing default text properties</li>
-                            <li>Text:
-                                <ul>
-                                    <li>Added Dimensions field (<code>width</code> x <code>height</code>)</li>
-                                    <li>Added Font, Font Size and Font Style properties</li>
-                                    <li>Added Alignment property</li>
-                                    <li>Added (unimplemented) Colors property (for background & text color)</li>
-                                </ul>
-                            </li>
-                            <li>Color Picker
-                                <ul>
-                                    <li>Added (unimplemented) Color box</li>
-                                    <li>Added RGB value (settable too)</li>
-                                    <li>Added HSV (or HSB) value (setable)</li>
-                                </ul>
-                            </li>
-                        </li>
-                        <li>Added <code>Create Worksheet</code> menu item</li>
-                        <li>Added <code>Create Page</code> menu item</li>
-                        <li>Fixed eraser using the wrong image for erasing</li>
-                        <li>Automatic font adding - to add a custom font, go to the <code>fonts</code> folder and put your custom font there</li>
-                        <li>Fixed sidebar not resizing to the correct height when resizing the window</li>
-                        <li>Fixed sidebar being wrongly positioned</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.0.0 <small>August 16th</small> <small>beta</small></h2>
-                    <ul>
-                        <li><b>First Beta Release :D</b></li>
-                        <li>For Bug Reports, you can (and should) open an issue on <a href="https://github.com/ShaharMS/EZWorksheet-Evolution/issues">The EZWorksheet-Evolution page</a></li>
-                        <li>Changed target build platform from native targets to electron. that means Right-To-Left text support, added support for printing and pdf exports</li>
-                        <li>Implemented the EZW File format, allows for:
-                            <ul>
-                                <li>saving history.</li>
-                                <li>saving text fields as text, not as images.</li>
-                                <li>saving dynamic shapes as shapes, not images.</li>
-                                <li>smaller file size.</li>
-                                <li>Higher quality graphics then saving/loading from/to images.</li>
-                                <li>Vector graphics for everything (excluding the page's background image, the image is saved as a png).</li>
-                                <li>save an entire worksheet in one file, instead of one file per page.</li>
-                            </ul>
-                        </li>
-                        <li>History tab Refactored:
-                            <ul>
-                                <li>Performance should be better.</li>
-                                <li>Fixed one item remaining on the page when the history is cleared.</li>
-                                <li>Added more icons, created shapes should now appear in history.</li>
-                            </ul>
-                        </li>
-                        <li>Changed some tooltips to better match their usage</li>
-                        <li><code>Open Folder</code> changed to <code>Open Worksheet</code></li>
-                        <li><code>Save Document</code> changed to <code>Save Worksheet</code></li>
-                        <li>Implemented <code>Open Worksheet</code></li>
-                        <li>Implemented <code>Export EZW</code></li>
-                        <li>Implemented <code>Export PDF</code></li>
-                        <li>Implemented <code>Redo</code></li>
-                        <li>Implemented <code>Undo</code></li>
-                        <li>Implemented <code>Send To Printer</code></li>
-                        <li>Implemented <code>Zoom In</code></li>
-                        <li>Implemented <code>Zoom Out</code></li>
-                        <li>Implemented <code>Zoom to Fit</code></li>
-                        <li>Implemented <code>Zoom 100%</code></li>
-                        <li>Implemented <code>Fullscreen</code></li>
-                        <li>Implemented <code>Revert Changes</code></li>
-                        <li>Fixed drawing outside the page allowed on large drawing sizes</li>
-                        <li>Fixed text fields and shapes drawn outside the page</li>
-                        <li>Fixed background text being exposed when pages are added</li>
-                        <li>Fixed generated/previously added text being unmodifiable by the attributes tab</li>
-                        <li>Fixed some unimplemented features not throwing warnings when used</li>
-                        <li>Fixed pages being rendered at incorrect positions</li>
-                        <li>Fixed crash when removing the last page if no page exists</li>
-                        <li>Fixed unexpected drawing behaviour when drawing on top of a text field/shape</li>
-                        <li>Fixed line drawing angle not updating when drawing outside of the page</li>
-                        <li>Fixed <code>Save Worksheet</code> not doing anything sometimes</li>
-                        <li>Higher FPS target <code>60</code> changed to <code>120</code>, drawing and dragging things should be smoother</li>
-                        <li>Coloring:
-                            <ul>
-                                <li>Color selectors implemented for text, color picker, shape.</li>
-                                <li>Added Transparency value.</li>
-                                <li>Removed the color wheel at the bottom left corner.</li>
-                                <li>Added updated in-real-time properties for the color picker: <code>RGB</code>, <code>Hex</code>, <code>HSV</code>.</li>
-                            </ul>
-                        </li>
-                        <li>Added Shapes Interface, now supports:
-                            <ul>
-                                <li>Outline Type.</li>
-                                <li>Outline Corner Style.</li>
-                                <li>Outline Joint Style.</li>
-                                <li>Outline Color.</li>
-                                <li>Shape Color.</li>
-                                <li>Outline Thickness.</li>
-                                <li>Smoothing (antialiasing).</li>
-                            </ul>
-                        </li>
-                        <li>Drawing:
-                            <ul>
-                                <li>Added line drawing capabilities:
-                                    <ul>
-                                        <li>Dotted line.</li>
-                                        <li>Solid line.</li>
-                                        <li>Dashed line.</li>
-                                        <li>Double Line.</li>
-                                        <li>No Outline (None).</li>
-                                    </ul>
-                                </li>
-                                <li>Added shapes, currently available:
-                                    <ul>
-                                        <li>rectangle.</li>
-                                    </ul>                                    
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.0.1 <small>August 20th</small> <small>beta</small></h2>
-                    <ul>
-                        <li>Fixed text disappearing when placing it for the first time</li>
-                        <li>First text positions glitching when over shapes</li>
-                        <li>Removed history saving, never worked, and shouldnt for performance reasons</li>
-                        <li>Fixed texts and shapes rendering outside pages</li>
-                        <li>Fixed texts and shapes not following the mouse when outside the page</li>
-                        <li>Fixed shapes getting wider when dragged outside the page</li>
-                        <li>Fixed textfields getting "skinnier" when saved to an ezw file</li>
-                        <li>Fixed fonts not being selected correctly for textfields</li>
-                        <li>History:
-                            <ul>
-                                <li>Added Shape Resizing.</li>
-                                <li>Added Shape Dragging.</li>
-                                <li>Added Text Resizing.</li>
-                                <li>Added Text Dragging.</li>
-                                <li>Added Text Rotating.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.0.2 <small>August 22nd</small> <small>beta</small></h2>
-                    <ul>
-                        <li>Shapes:
-                            <ul>
-                                <li>Added Circle.</li>
-                                <li>Added Triangle.</li>
-                                <li>Added FreeForm (multiple lines joined together).</li>
-                            </ul>
-                        </li>
-                        <li>History re-managed, new events added:
-                            <ul>
-                                <li>Added <code>Moved Joint</code>.</li>
-                                <li>Added <code>Moved Control Point</code>.</li>
-                            </ul>
-                        </li>
-                        <li>some optimizations to the way <code>.ezw</code> files are parsed, from now on, all versions should support old <code>.ezw</code> files.</li>
-                        <li>Shapes are now movable by pressing the arrow buttons</li>
-                        <li>Shapes are now resizable by pressing <code>ctrl</code> + the arrow buttons</li>
-                        <li>fixed exaggerated horizontal scroll</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.0.3 <small>August 24th</small> <small>beta</small></h2>
-                    <ul>
-                        <li>Top Bar
-                            <ul>
-                                <li>Removed Cut.</li>
-                                <li>Removed Copy.</li>
-                                <li>Removed Paste.</li>
-                            </ul>
-                        </li>
-                        <li>The above items are no longer useful, and thus removed</li>
-                        <li>Implemented shape copy-pasting</li>
-                        <li>Implemented shape deletion</li>
-                        <li>Fixed pages being hidden when resizing the window</li>
-                        <li>Fixed pages getting cut off randomly</li>
-                        <li>Fixed shape outline style not getting saved correctly</li>
-                        <li>Fixed crashes when ellipse width/height approaches 0</li>
-                        <li>Fixed ellipses not rendering when reversing the shape</li>
-                        <li>Fixed rectangles becoming 0 width/height when reversed</li>
-                        <li>Fixed weirdness surrounding positioning & selection of freeforms</li>
-                        <li>Added icon, might change in the future</li>
-                        <li>Fixed rotation joint not appearing (regression), new texture</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.0.4 <small>August 24th</small> <small>beta</small></h2>
-                    <ul>
-                        <li>Fixed inconsistencies with <code>.ezw</code> file savings</li>
-                        <li>opening a <code>.ezw</code> file with an unsupported version now throws a warning. (files from <code>beta-1.0.0</code> and later are supported)</li>
-                        <li>support for earlier versions will be added in the future if requested.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>beta-1.1.0 <small>August 27th</small> <small>beta</small></h2>
-                    <ul>
-                        <li>Added new shape - Table:
-                            <ul>
-                                <li>Supports dual-column textfields.</li>
-                                <li>supports ediable ratio between columns.</li>
-                                <li>Supports editable size of title row.</li>
-                                <li>supports dynamic resizing & dragging.</li>
-                            </ul>
-                        </li>
-                        <li>Added history properties:
-                            <ul>
-                                <li><code>Removed Last Page</code>.</li>
-                                <li><code>Created New Page</code>.</li>
-                                <li><code>Added Page</code>.</li>
-
-                            </ul>
-                        </li>
-                        <li>Texts now support BiDirectional text inputs with a custom Bidi algorithm. might change in the future</li>
-                        <li>Added bug reporting menu to the app, containing:
-                            <ul>
-                                <li>Link to the <a href="https://github.com/ShaharMS/EZWorksheet-Evolution/issues">Bug Reporting Page</a>.</li>
-                                <li>Link to <a href="https://twitter.com/MarcusShahar">My Twitter Profile</a>.</li>
-                                <li>My Discord username (ShaharMS#8195).</li>
-                            </ul>
-                        </li>
-                        <li>Removed workbooks for now, as they have no implementation. once implemented, they will be readded.</li>
-                    </ul>
-                </div>
-            </div>
+    </section>
+    <section>
+        <div class="row pad" style="column-gap: auto; justify-content: space-between; flex-wrap: wrap;">
+            <h3 class="img-desc"">
+                EZWorksheet lets you scan images of worksheets, on which it will detect
+                lines, and put text fields on them. this allows for seemless integration with physical worksheets & workbooks.
+            </h3>
+            <img src="./images/feature-display-1.png" alt="An image of a worksheet, with text fields generated on top of the lines inside it" class="img">
         </div>
-    </div>
+    </section>
 
     <script>
-        document.getElementById('version').innerHTML = getHTMLFrom("./api/version.html");
-        document.getElementById('download').addEventListener('click', function () {
-            var OSName = "Windows 11";
-            if (window.navigator.userAgent.indexOf("Windows NT 10.0") != -1) OSName = "Windows 10";
-            if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName = "Windows 8.1";
-            if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName = "Windows 8";
-            if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName = "Windows 7";
-            if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName = "Windows Vista";
-            if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName = "Windows XP";
-            if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName = "Windows 2000";
-            if (window.navigator.userAgent.indexOf("Mac") != -1) OSName = "Mac/iOS";
-            if (window.navigator.userAgent.indexOf("X11") != -1) OSName = "UNIX";
-            if (window.navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
-            console.log(OSName);
-            console.log(OSName == "Windows 10");
-            switch (OSName) {
-                case "Windows 10":
-                    //download the app from /program/${document.getElementById('version').innerHTML}
-                    window.open(`./program/Windows/${document.getElementById('version').innerHTML}.zip`, "_blank");
-                    break;
-            
-                default:
-                    break;
-            }
+        document.getElementById("version").textContent = "Version: " + getHTMLFrom("./api/version.html");
+        document.getElementById("download").addEventListener("click", (elem, e) => {
+            window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
         });
     </script>
 </body>
-
 </html>
