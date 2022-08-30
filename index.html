@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZWorksheet | Your New Schoolwork Manager</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="mainPage.css">
     <script src="./sources/htmlIncluder.js"></script>
 </head>
+
 <body>
-    <section>
-        <h1 class="app-title">Your New Schoolwork Manager.</h1>
-        <p class="app-desc">EZWorksheet lets you get rid of school related mess by replacing your notebooks. and ring binder. and pencil case..</p>
-    
-        <div class="row" style="column-gap: 10px;">
+    <nav>
+        <div style="display: flex; flex-direction: row; align-items: center;">
+            <img src="./icon.svg" alt="icon=logo">
+            <div class="main-search-bar">
+                <form action="http://localhost:5500/index.html#" method="get">
+                    <input class="search-bar" type="text" placeholder="Search Here" name="q">
+                </form>
+            </div>
+        </div>
+        <li class="nav-buttons">
+            <ul>&nbsp;<a href="#">About</a>&nbsp;|</ul>
+            <ul>&nbsp;<a href="#">Apps</a>&nbsp;|</ul>
+            <ul>&nbsp;<a href="">Download</a></ul>
+        </li>
+    </nav>
+
+    <section class="first-section">
+        <h1 class="app-title">Lorem ipsum dolor</h1>
+        <h2 class="app-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, laboriosam maxime.
+            Officiis iusto numquam</h2>
+        <a class="download-here-button" href="#">Download Here</a>
+
+        <!-- <div class="row" style="column-gap: 10px;">
             <code class="codeblock">
                 <h2 id="version" style="margin: 5px;"></h2>
             </code>
@@ -26,13 +46,14 @@
             <code class="codeblock">
                 <a href="./changelog.html" style="text-decoration: none; color: rgb(212, 212, 212)"><h2 style="margin: 5px;">Changelog</h2></a>
             </code>
-        </div>
+        </div> -->
     </section>
-    <section>
-        <div class="row pad" style="column-gap: auto; justify-content: space-between; flex-wrap: wrap;">
-            <h3 class="img-desc"">
+    <!-- <section>
+        <div style="column-gap: auto; justify-content: space-between; flex-wrap: wrap;">
+            <h3 class="img-description">
                 EZWorksheet lets you scan images of worksheets, on which it will detect
-                lines, and put text fields on them. this allows for seemless integration with physical worksheets & workbooks.
+                lines, and put text fields on them. this allows for seemless integration with physical worksheets &
+                workbooks.
             </h3>
             <img src="./images/feature-display-1.png" alt="An image of a worksheet, with text fields generated on top of the lines inside it" class="img">
         </div>
@@ -40,9 +61,10 @@
 
     <script>
         document.getElementById("version").textContent = "Version: " + getHTMLFrom("./api/version.html");
-        document.getElementById("download").addEventListener("click", (elem, e) => {
-            window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
-        });
-    </script>
+        // document.getElementById("download").addEventListener("click", (elem, e) => {
+        //     window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
+        // });
+    </script> -->
 </body>
+
 </html>

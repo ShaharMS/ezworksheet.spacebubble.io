@@ -1,46 +1,96 @@
-section {
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Jost', 'sans-serif';
+}
+
+.first-section {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-section .app-title {
-    padding-block: 20vh;
-    font-size: xx-large;
+h1 {
+    font-size: 60px;
+    background: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4.5em;
 }
 
-section .app-desc {
-    padding-inline: 20vw;
-    font-size: 1.2em;
-    font-weight: bold;
+.app-description {
+    font-weight: 300;
+    font-size: 25px;
+    width: 47%;
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.9em;
 }
 
-section .pad {
-    padding-inline: 5vw;
+.download-here-button {
+    text-decoration: none;
+    color: white;
+    background: rgb(79, 217, 141);
+    background: linear-gradient(156deg, rgba(79, 217, 141, 1) 0%, rgb(13, 157, 255) 100%);
+    padding: 10px 32px;
+    border-radius: 35px;
+    font-size: 1.4em;
+    transition: background-color .2s;
 }
 
-section .img {
-    width: 70%;
-    min-width: 600px;
+.download-here-button:hover {
+    background: white;
+    color: rgb(79, 217, 141);
+    color: linear-gradient(156deg, rgba(79, 217, 141, 1) 0%, rgb(13, 157, 255) 100%);
 }
 
-section .img-desc {
-    width: 20%;
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
 }
 
-@media screen and (max-width: 852px) {
+nav img {
+    margin-right: 20px;
+}
+
+.search-bar {
+    border-radius: 40px;
+    padding: 7px 0px;
+    padding-right: 36px;
+    padding-left: 18px;
+    font-size: 1em;
+    text-align: left;
+    outline: none;
+    font-family: 'Jost';
+    border: none;
     
-    section .img-desc {
-        width: 100%;
-        text-align: center;
-        margin-inline: auto;
-    }
-
-    .img {
-        margin-inline: auto;
-    }
 }
+
+.nav-buttons {
+    display: flex;
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Jost';
+}
+
+
+
