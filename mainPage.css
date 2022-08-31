@@ -12,6 +12,19 @@ body {
     font-family: 'Jost', 'sans-serif';
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #232323;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(87, 218, 222);
+    border-radius: 15px;
+  }
+
 .first-section {
     height: 100vh;
     display: flex;
@@ -22,11 +35,16 @@ body {
 
 h1 {
     font-size: 60px;
-    background: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 4.5em;
+    background-position: left;
+}
+
+h1:hover {
+    background-position: right;
 }
 
 .app-description {
@@ -38,21 +56,16 @@ h1 {
     font-size: 1.9em;
 }
 
-.download-here-button {
-    text-decoration: none;
-    color: white;
-    background: rgb(79, 217, 141);
-    background: linear-gradient(156deg, rgba(79, 217, 141, 1) 0%, rgb(13, 157, 255) 100%);
-    padding: 10px 32px;
-    border-radius: 35px;
-    font-size: 1.4em;
-    transition: background-color .2s;
+.button-first-section {
+    text-align: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, #4fd98d, #0098ff);     /*לטפל אחכ*/
+    padding: 10px 30px;
 }
 
-.download-here-button:hover {
-    background: white;
-    color: rgb(79, 217, 141);
-    color: linear-gradient(156deg, rgba(79, 217, 141, 1) 0%, rgb(13, 157, 255) 100%);
+.button-first-section:hover {
+    cursor: pointer;
 }
 
 nav {
@@ -90,6 +103,68 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'Jost';
+}
+
+/* second-section */
+
+.second-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.text-explain {
+    width: 60%;
+}
+
+.text-explain h3 {
+    font-size: 2em;
+}
+
+.text-explain p {
+    font-size: 1.2em;
+}
+
+.second-section img {
+    margin-top: 200px;
+    width: 800px;
+    height: 450px;
+    align-items: end;
+    border-radius: 25px;
+    justify-content: end;
+    margin-right: 50px;
+}
+
+.way-styling {
+    background-image: linear-gradient(to bottom right, #88FFC6, #00F0FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+/* third-section */
+
+.third-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.third-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.third-section div {
+    width: 350px;
 }
 
 
