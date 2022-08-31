@@ -9,12 +9,14 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="mainPage.css">
     <script src="./sources/htmlIncluder.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
     <nav>
         <div style="display: flex; flex-direction: row; align-items: center;">
-            <img src="./icon.svg" alt="icon=logo">
+            <a href="#"><img src="./icon.svg" alt="icon=logo"></a>
             <div class="main-search-bar">
                 <form action="http://localhost:5500/index.html#" method="get">
                     <input class="search-bar" type="text" placeholder="Search Here" name="q">
@@ -32,9 +34,8 @@
         <h1 class="app-title">Lorem ipsum dolor</h1>
         <h2 class="app-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, laboriosam maxime.
             Officiis iusto numquam</h2>
-            <div class="button-first-section">
-                <p>Download Here</p>
-            </div>
+        <a href="#" class="button-first-section">Download Here</a>
+        
         <!-- <a class="download-here-button" href="#">Download Here</a> -->
 
         <!-- <div class="row" style="column-gap: 10px;">
@@ -50,7 +51,7 @@
                 <a href="./changelog.html" style="text-decoration: none; color: rgb(212, 212, 212)"><h2 style="margin: 5px;">Changelog</h2></a>
             </code>
         </div> -->
-        
+
     </section>
 
 
@@ -76,12 +77,64 @@
         </div>
     </section>
 
-    <!-- <script>
-        document.getElementById("version").textContent = "Version: " + getHTMLFrom("./api/version.html");
-        // document.getElementById("download").addEventListener("click", (elem, e) => {
-        //     window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
-        // });
-    </script> --> 
+    <footer>
+        <div class="footer-content" style="margin-top: 20px;">
+            <div class="twitter-links links">
+                <h4 style="margin-bottom: 5px;">Web Develpment</h4>
+                <a href="https://twitter.com/MarcusShahar">
+                    <ion-icon class="twitter" name="logo-twitter"></ion-icon> @MarcusShahar
+                </a>
+                <a href="https://twitter.com/ItsBenDov">
+                    <ion-icon class="twitter" name="logo-twitter"></ion-icon> @ItsBenDov
+                </a>
+                <a href="https://twitter.com/erty1155">
+                    <ion-icon class="twitter" name="logo-twitter"></ion-icon> @erty1155
+                </a>
+            </div>
+            <div class="github-links links">
+                <br>
+                <a href="https://github.com/ShaharMS">
+                    <ion-icon name="logo-github"></ion-icon> @ShaharMS
+                </a>
+                <a href="https://github.com/ItsBenDov">
+                    <ion-icon name="logo-github"></ion-icon> @ItsBenDov
+                </a>
+                <a href="https://github.com/erty1155">
+                    <ion-icon name="logo-github"></ion-icon> @erty1155
+                </a>
+            </div>
+
+            <div class="found-a-bug">
+                <h4 style="margin-bottom: 5px;">Found a bug?</h4>
+                <a href="https://github.com/ShaharMS/EZWorksheet-Evolution/tree/main/.github/ISSUE_TEMPLATE"
+                    style="color:rgb(107, 43, 255) ;">Click Here</a>
+            </div>
+        </div>
+        <p class="footer-text">Copyright © 2022 Shahar Marcus. All Rights Reserved.</p>
+
+    </footer>
+
+    <script>
+        document.getElementById("download").addEventListener("click", (elem, e) => {
+            window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
+        });
+    </script>
+    <script>
+        let reviews = document.getElementsByClassName("review");
+        for (let i = 0; i < reviews.length; i++) {
+            let review = reviews[i];
+            let quotes1 = new Image(144 / 3, 144 / 3);
+            quotes1.src = "./images/quotes.svg";
+            quotes1.style.position = "relative";
+            quotes1.style.float = "right";
+            review.appendChild(quotes1);
+            let quotes2 = new Image(144 / 3, 144 / 3);
+            quotes2.src = "./images/quotes.svg";
+            quotes2.style.position = "relative";
+            quotes2.style.left = "-50px";
+            review.prepend(quotes2)
+        }
+    </script>
 </body>
 
 </html>

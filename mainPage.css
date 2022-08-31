@@ -10,6 +10,7 @@ body {
     background-color: black;
     color: white;
     font-family: 'Jost', 'sans-serif';
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -41,10 +42,7 @@ h1 {
     -webkit-text-fill-color: transparent;
     font-size: 4.5em;
     background-position: left;
-}
-
-h1:hover {
-    background-position: right;
+    text-align: center;
 }
 
 .app-description {
@@ -72,6 +70,7 @@ nav {
     position: absolute;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     padding: 25px;
@@ -130,10 +129,32 @@ a {
     margin-top: 200px;
     width: 800px;
     height: 450px;
-    align-items: end;
     border-radius: 25px;
-    justify-content: end;
     margin-right: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+    .second-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text-explain {
+        width: 100%;
+        text-align: center;
+    }
+    .text-explain h3 {
+        margin-bottom: 10px;
+    }
+
+    .second-section img {
+        margin-top: 150px;
+        width: 800px;
+        height: 450px;
+        border-radius: 25px;
+        margin-right: 0px;
+        align-self: center;
+    }
 }
 
 .way-styling {
@@ -167,5 +188,85 @@ a {
     width: 350px;
 }
 
+.third-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+/* footer */
+
+footer {
+    margin-inline: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-block: 5px;
+    justify-content: space-evenly;
+
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+ion-icon {
+    width: 35px;
+}
+
+.twitter {
+    color: #0098ff;
+}
+
+section {
+    height: max-content;
+}
+
+footer {
+    margin: unset;
+    background-color: rgb(40, 40, 40);
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 0.7rem;
+    }
+    .first-section, .second-section, .third-section {
+        margin-inline: 20px;
+    }
+
+    .second-section img {
+        margin-top: 50px;
+        width: 350px;
+        height: 150px;
+    }
+
+    .app-description {
+        width: 100%;
+    }
+    .text-explain {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .third-section div {
+        font-size: 0.9em;
+    }
+    
+}
 
