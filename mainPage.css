@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Jost', 'sans-serif';
     overflow-x: hidden;
 }
@@ -52,6 +52,7 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.9em;
+    margin-bottom: 30px;
 }
 
 .button-first-section {
@@ -60,6 +61,16 @@ h1 {
     border-radius: 30px;
     background: linear-gradient(to bottom right, #4fd98d, #0098ff);     /*לטפל אחכ*/
     padding: 10px 30px;
+}
+
+.button-try-online {
+    outline: 2px solid white;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    background: transparent;
+    padding: 10px 50px;
+    margin-left: 30px;
 }
 
 .button-first-section:hover {
@@ -74,7 +85,7 @@ nav {
     align-items: center;
     width: 100%;
     padding: 25px;
-}
+}   
 
 nav img {
     margin-right: 20px;
@@ -90,7 +101,10 @@ nav img {
     outline: none;
     font-family: 'Jost';
     border: none;
-    
+    background-color: hsl(0, 0%, 100%);     
+}
+::placeholder {
+    color: rgb(0, 0, 0);
 }
 
 .nav-buttons {
@@ -229,11 +243,11 @@ ion-icon {
 }
 
 .twitter {
-    color: #0098ff;
+    color: hsl(204, 88%, 53%);
 }
 
 section {
-    height: max-content;
+    height: 100%;
 }
 
 footer {

@@ -19,7 +19,7 @@
             <a href="#"><img src="./icon.svg" alt="icon=logo"></a>
             <div class="main-search-bar">
                 <form action="http://localhost:5500/index.html#" method="get">
-                    <input class="search-bar" type="text" placeholder="Search Here" name="q">
+                    <input class="search-bar" type="text" placeholder="Search Here"  name="q">
                 </form>
             </div>
         </div>
@@ -31,26 +31,15 @@
     </nav>
 
     <section class="first-section">
-        <h1 class="app-title">Lorem ipsum dolor</h1>
-        <h2 class="app-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, laboriosam maxime.
-            Officiis iusto numquam</h2>
-        <a href="#" class="button-first-section">Download Here</a>
-        
-        <!-- <a class="download-here-button" href="#">Download Here</a> -->
-
-        <!-- <div class="row" style="column-gap: 10px;">
-            <code class="codeblock">
-                <h2 id="version" style="margin: 5px;"></h2>
-            </code>
-            <code class="codeblock downloadButton" id="download">
-                <h2 style="margin: 5px;">
-                    <img src="./images/DownloadIcon.svg" alt="" class="downloadIcon">
-                    Download</h2>
-            </code>
-            <code class="codeblock">
-                <a href="./changelog.html" style="text-decoration: none; color: rgb(212, 212, 212)"><h2 style="margin: 5px;">Changelog</h2></a>
-            </code>
-        </div> -->
+        <h1 class="app-title">Time To Stop Repetition.</h1>
+        <h2 class="app-description">
+            Still getting annoyed by these annoying, repetetive and bloated worksheets?<br>
+            yes yes i do what is the good ok nice now i understand
+        </h2>
+        <div> 
+            <a href="#" class="button-first-section">Download Here</a>
+            <a href="./online-app/index.html" class="button-try-online">Try Online</a>
+        </div>
 
     </section>
 
@@ -68,13 +57,17 @@
 
     <section class="third-section">
         <div class="review">
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat mollitia facere ut?</h3>
-            <small>- yishay, 18.08.2022</small>
+            <h3>Sheeeeeeeeeeee<br>sh, Sheeeeeeeeeeesh</h3>
+            <small>- Yishay, <a href="https://twitter.com/Yishai02340854/status/1559606257614524417">Twitter</a>, 18.08.2022</small>
         </div>
         <div class="review">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis aperiam</h3>
-            <small>- ohad ben dov, 18.08.2022</small>
+            <h3>Wow this looks very good I like it good</h3>
+            <small>- Ohad Ben Dov, <a href="https://twitter.com/ItsBenDov/status/1559592632354996224">Twitter</a>, 18.08.2022</small>
         </div>
+        <div class="review">
+            <h3>Your EZ way to Work Sheet</h3>
+            <small>- Erel Ben-Or, <a href="https://twitter.com/erty1155">Discord</a> 31.08.2022</small>
+        </Div>
     </section>
 
     <footer>
@@ -107,18 +100,13 @@
             <div class="found-a-bug">
                 <h4 style="margin-bottom: 5px;">Found a bug?</h4>
                 <a href="https://github.com/ShaharMS/EZWorksheet-Evolution/tree/main/.github/ISSUE_TEMPLATE"
-                    style="color:rgb(107, 43, 255) ;">Click Here</a>
+                    style="color:rgb(249, 63, 30) ;">Report Here</a>
             </div>
         </div>
         <p class="footer-text">Copyright © 2022 Shahar Marcus. All Rights Reserved.</p>
 
     </footer>
 
-    <script>
-        document.getElementById("download").addEventListener("click", (elem, e) => {
-            window.open(`./app/Windows/${getHTMLFrom("./api/version.html")}.zip`, "_blank");
-        });
-    </script>
     <script>
         let reviews = document.getElementsByClassName("review");
         for (let i = 0; i < reviews.length; i++) {

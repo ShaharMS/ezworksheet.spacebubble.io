@@ -1,18 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZWorksheet | Web App</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="mainPage.css">
-    <script src="./sources/htmlIncluder.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</head>
+	
+	<meta charset="utf-8">
+	
+	<title>EZWorksheet</title>
+	
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	
+	
+	
+	<script type="text/javascript" src="./EZWorksheet.js"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
+	
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: 'Comfortaa Medium';
+			src: url('fonts/Comfortaa.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Comfortaa.woff') format('woff'),
+			url('fonts/Comfortaa.ttf') format('truetype'),
+			url('fonts/Comfortaa.svg#Comfortaa%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DavidLibre-Regular';
+			src: url('fonts/David.eot?#iefix') format('embedded-opentype'),
+			url('fonts/David.woff') format('woff'),
+			url('fonts/David.ttf') format('truetype'),
+			url('fonts/David.svg#DavidLibre-Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Fira Code Bold';
+			src: url('fonts/Fira Code,bold.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Fira Code,bold.woff') format('woff'),
+			url('fonts/Fira Code,bold.ttf') format('truetype'),
+			url('fonts/Fira Code,bold.svg#Fira%20Code%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Fira Code Regular';
+			src: url('fonts/Fira Code.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Fira Code.woff') format('woff'),
+			url('fonts/Fira Code.ttf') format('truetype'),
+			url('fonts/Fira Code.svg#Fira%20Code%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Likkud UB';
+			src: url('fonts/Likkud.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Likkud.woff') format('woff'),
+			url('fonts/Likkud.ttf') format('truetype'),
+			url('fonts/Likkud.svg#Likkud%20UB') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Manrope Bold';
+			src: url('fonts/Manrope,bold.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Manrope,bold.woff') format('woff'),
+			url('fonts/Manrope,bold.ttf') format('truetype'),
+			url('fonts/Manrope,bold.svg#Manrope%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Manrope Regular';
+			src: url('fonts/Manrope.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Manrope.woff') format('woff'),
+			url('fonts/Manrope.ttf') format('truetype'),
+			url('fonts/Manrope.svg#Manrope%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Open Sans Regular';
+			src: url('fonts/Open Sans.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Open Sans.woff') format('woff'),
+			url('fonts/Open Sans.ttf') format('truetype'),
+			url('fonts/Open Sans.svg#Open%20Sans%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Rashi Hebrew Regular';
+			src: url('fonts/Rashi.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Rashi.woff') format('woff'),
+			url('fonts/Rashi.ttf') format('truetype'),
+			url('fonts/Rashi.svg#Noto%20Rashi%20Hebrew%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Rubik Bold Italic';
+			src: url('fonts/Rubik,bold,italic.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Rubik,bold,italic.woff') format('woff'),
+			url('fonts/Rubik,bold,italic.ttf') format('truetype'),
+			url('fonts/Rubik,bold,italic.svg#Rubik%20Bold%20Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Rubik Bold';
+			src: url('fonts/Rubik,bold.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Rubik,bold.woff') format('woff'),
+			url('fonts/Rubik,bold.ttf') format('truetype'),
+			url('fonts/Rubik,bold.svg#Rubik%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Rubik Light Italic';
+			src: url('fonts/Rubik,italic.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Rubik,italic.woff') format('woff'),
+			url('fonts/Rubik,italic.ttf') format('truetype'),
+			url('fonts/Rubik,italic.svg#Rubik%20Light%20Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Rubik Light';
+			src: url('fonts/Rubik.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Rubik.woff') format('woff'),
+			url('fonts/Rubik.ttf') format('truetype'),
+			url('fonts/Rubik.svg#Rubik%20Light') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Segoe UI';
+			src: url('fonts/Segoe UI.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Segoe UI.woff') format('woff'),
+			url('fonts/Segoe UI.ttf') format('truetype'),
+			url('fonts/Segoe UI.svg#Segoe%20UI') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Varela Round Regular';
+			src: url('fonts/Varela Round.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Varela Round.woff') format('woff'),
+			url('fonts/Varela Round.ttf') format('truetype'),
+			url('fonts/Varela Round.svg#Varela%20Round%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
 
+	</style>
+	
+</head>
 <body>
-    
+	
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
+	<div id="openfl-content"></div>
+	
+	<script type="text/javascript">
+		lime.embed ("EZWorksheet", "openfl-content", 0, 0, { parameters: {} });
+	</script>
+	
 </body>
+</html>
