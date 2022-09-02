@@ -26,6 +26,12 @@ body {
     border-radius: 15px;
   }
 
+.navbar-icon-searchbar {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
 .first-section {
     height: 100vh;
     display: flex;
@@ -78,6 +84,13 @@ h1 {
     text-align: center;
     border-radius: 30px;
     padding: 8px 48px;
+}
+
+.button-try-online-background {
+    display: flex; 
+    background: black; 
+    border-radius: 30px; 
+    align-items: center;
 }
 
 .gradient-outline {
