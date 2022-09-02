@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
 
 * {
     margin: 0;
@@ -48,28 +48,43 @@ h1 {
 .app-description {
     font-weight: 300;
     font-size: 25px;
-    width: 47%;
+    width: min(max(47%, 800px), 100%);
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.9em;
     margin-bottom: 30px;
 }
 
-.button-first-section {
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-download-here {
     text-align: center;
-    justify-content: center;
     border-radius: 30px;
     background: linear-gradient(to bottom right, #4fd98d, #0098ff);     /*לטפל אחכ*/
     padding: 10px 30px;
 }
 
 .button-try-online {
-    outline: 2px solid white;
-    color: white;
+    font-size: inherit;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: left;
     text-align: center;
     border-radius: 30px;
-    background: transparent;
-    padding: 10px 50px;
+    padding: 8px 48px;
+}
+
+.gradient-outline {
+    display: flex;
+    background: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    padding: 2px 2px;
+    border-radius: 30px;
     margin-left: 30px;
 }
 
@@ -199,7 +214,8 @@ a {
 
 
 .third-section div {
-    width: 350px;
+    width: min(350px, 40vw);
+    word-wrap: break-word;
 }
 
 .third-section {

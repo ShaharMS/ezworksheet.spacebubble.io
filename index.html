@@ -19,15 +19,15 @@
             <a href="#"><img src="./icon.svg" alt="icon=logo"></a>
             <div class="main-search-bar">
                 <form action="./" method="get">
-                    <input class="search-bar" type="text" placeholder="Search Here"  name="q">
+                    <input class="search-bar" type="text" placeholder="Search Here" name="q">
                 </form>
             </div>
         </div>
-        <li class="nav-buttons">
-            <ul>&nbsp;<a href="#">About</a>&nbsp;|</ul>
-            <ul>&nbsp;<a href="#">Apps</a>&nbsp;|</ul>
-            <ul>&nbsp;<a href="">Download</a></ul>
-        </li>
+        <div class="nav-buttons">
+            <span>&nbsp;<a href="#">About</a>&nbsp;|</span>
+            <span>&nbsp;<a href="#">Apps</a>&nbsp;|</span>
+            <span>&nbsp;<a href="#">Changelog</a>&nbsp;</span>
+        </div>
     </nav>
 
     <section class="first-section">
@@ -37,9 +37,13 @@
             Tired of carrying around hundereds of pages?</br>
             Don't worry! I got you there 😃
         </h2>
-        <div> 
-            <a href="#" class="button-first-section">Download Here</a>
-            <a href="./bin/index.html" class="button-try-online">Try Online</a>
+        <div class="button-container"> 
+            <a href="#" class="button-download-here">Download Here</a>
+            <div class="gradient-outline">
+                <div style="display: flex; background: black; border-radius: 30px; align-items: center;">
+                    <a href="./bin/index.html" class="button-try-online ">Try Online</a>
+                </div>
+            </div>
         </div>
 
     </section>
