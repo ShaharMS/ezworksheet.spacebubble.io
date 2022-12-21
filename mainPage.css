@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --custom-linear-gradient: linear-gradient(to bottom right, #4fd98d, #0098ff);
+}
+
 body {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -47,7 +52,7 @@ body {
 
 h1 {
     font-size: 60px;
-    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    background-image: var(--custom-linear-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -74,14 +79,14 @@ h1 {
 .button-download-here {
     text-align: center;
     border-radius: 30px;
-    background: linear-gradient(to bottom right, #4fd98d, #0098ff);     /*לטפל אחכ*/
+    background: var(--custom-linear-gradient);
     padding: 10px 30px;
 }
 
 .button-try-online {
     font-size: inherit;
     font-weight: 500;
-    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    background-image: var(--custom-linear-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -93,14 +98,14 @@ h1 {
 
 .button-try-online-background {
     display: flex; 
-    background: black; 
+    background: var(--bg-color); 
     border-radius: 30px; 
     align-items: center;
 }
 
 .gradient-outline {
     display: flex;
-    background: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    background: var(--custom-linear-gradient);
     padding: 2px 2px;
     border-radius: 30px;
     margin-left: 30px;
@@ -139,7 +144,7 @@ nav img {
     outline: none;
     font-family: 'Jost';
     border: none;
-    background-color: hsl(0, 0%, 100%);     
+    background-color: rgb(255, 255, 255);     
 }
 ::placeholder {
     color: rgb(0, 0, 0);
@@ -229,7 +234,7 @@ a {
 .third-section h3 {
     font-size: 2.5em;
     margin-bottom: 15px;
-    background-image: linear-gradient(to bottom right, #4fd98d, #0098ff);
+    background-image: var(--custom-linear-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
