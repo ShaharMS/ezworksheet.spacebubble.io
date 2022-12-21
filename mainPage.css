@@ -7,12 +7,12 @@
 }
 
 :root {
-    --bg-color: rgb(0, 0, 0);
+    --bg-color: rgb(12, 12, 12);
     --custom-linear-gradient: linear-gradient(to bottom right, #4fd98d, #0098ff);
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--bg-color);
     color: rgb(255, 255, 255);
     font-family: 'Jost', 'sans-serif';
     overflow-x: hidden;
