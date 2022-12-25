@@ -37,7 +37,11 @@ body {
     align-items: center;
     padding-bottom: 0;
 }
-
+div > .icon {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
 .icon {
     height: 2.8em;
 }
@@ -121,6 +125,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    height: 100px;
     width: 100%;
     padding: 25px;
 }   
