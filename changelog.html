@@ -12,7 +12,9 @@
 <body>
 
     <div style="margin: 20px;">
-        <div style="display: flex; justify-content: center;"><h1>Changelog</h1></div>
+        <div style="display: flex; justify-content: center;">
+            <h1>Changelog</h1>
+        </div>
         <br>
         <div style="display: flex; flex-direction: column-reverse;">
             <div>
@@ -161,7 +163,8 @@
                             <li>Added Transparency value.</li>
                             <li>Removed the color wheel at the bottom left corner.</li>
                             <li>Added updated in-real-time properties for the color picker: <code>RGB</code>,
-                                <code>Hex</code>, <code>HSV</code>.</li>
+                                <code>Hex</code>, <code>HSV</code>.
+                            </li>
                         </ul>
                     </li>
                     <li>Added Shapes Interface, now supports:
@@ -269,7 +272,8 @@
                 <ul>
                     <li>Fixed inconsistencies with <code>.ezw</code> file savings</li>
                     <li>opening a <code>.ezw</code> file with an unsupported version now throws a warning. (files from
-                        <code>beta-1.0.0</code> and later are supported)</li>
+                        <code>beta-1.0.0</code> and later are supported)
+                    </li>
                     <li>support for earlier versions will be added in the future if requested.</li>
                 </ul>
             </div>
@@ -279,7 +283,8 @@
                     <li>Code:
                         <ul>
                             <li>Shapes' infrastructure was overhauled, bugs should be easier to fix now</li>
-                            <li>The page editor's API has been extended, allowing for more intuitive/advanced features to be added in the future</li>
+                            <li>The page editor's API has been extended, allowing for more intuitive/advanced features
+                                to be added in the future</li>
                         </ul>
                     </li>
                     <li>Added new shape - Table:
@@ -311,24 +316,30 @@
                             <li>My Discord username (ShaharMS#8195).</li>
                         </ul>
                     </li>
-                    <li>Removed workbooks for now, as they have no implementation. once implemented, they will be readded.</li>
+                    <li>Removed workbooks for now, as they have no implementation. once implemented, they will be
+                        readded.</li>
                     <li>Fixed dotted circular outlines acting like dashed ones</li>
                     <li>Fixed some inconsistencies with outline drawing of circular shapes</li>
                     <li>Fixed some shapes drawing solid outline when Outline Style is None</li>
                     <li>Fixed slowdowns when creating blank pages</li>
                 </ul>
             </div>
+            <div>
+                <h2>beta-1.2.0 <small>September 9th</small> <small>beta</small></h2>
+                <ul>
+                    <li>Shapes can now be moved around using the arrow keys.</li>
+                    <li>Shape joints can now be moved around by clicking them, holding the mouse down in the same place,
+                        and using the arrow keys.</li>
+                    <li>Fixed some shapes saving incorrectly when using the <code>.ezw</code> file format</li>
+                    <li>Fixed table's "ratio point" not updating when the table is first created.</li>
+                    <li>Stablizations, the app should now be less susceptible to crashes.</li>
+                </ul>
+            </div>
+            <div>
+                <h2>beta-2.0.0 <small>Refactor</small> <small>February 15th~</small> <small>beta</small></h2>
+            </div>
         </div>
-        <div>
-            <h2>beta-1.2.0 <small>September 9th</small> <small>beta</small></h2>
-            <ul>
-                <li>Shapes can now be moved around using the arrow keys.</li>
-                <li>Shape joints can now be moved around by clicking them, holding the mouse down in the same place, and using the arrow keys.</li>
-                <li>Fixed some shapes saving incorrectly when using the <code>.ezw</code> file format</li>
-                <li>Fixed table's "ratio point" not updating when the table is first created.</li>
-                <li>Stablizations, the app should now be less susceptible to crashes.</li>
-            </ul>
-        </div>
+
 </body>
 
 </html>
